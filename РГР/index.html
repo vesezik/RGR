@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна | AI News Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><span class="text-gradient">AI.Portal</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Головна</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Про сайт</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">Новини</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container py-2">
+            <h1 class="display-3 fw-bold mb-3" style="text-shadow: 0 4px 10px rgba(0,0,0,0.7);">Світ Штучного Інтелекту</h1>
+            <p class="lead mb-4 fs-4 text-white" style="max-width: 800px; margin: 0 auto; text-shadow: 0 2px 6px rgba(0,0,0,0.6); opacity: 0.95;">
+                Актуальні новини, проривні технології генеративного ШІ та майбутнє робототехніки на одному порталі.
+            </p>
+            <div class="mt-4">
+                <a href="news.html" class="btn btn-primary btn-lg px-5 py-2.5 shadow-lg fw-bold">Перейти до новин</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="fw-bold mb-4 position-relative section-title">Останні важливі події</h2>
+                
+                <div id="top-news-grid" class="news-container">
+                    </div>
+            </div>
+
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="sticky-sidebar">
+                    <div class="card sidebar-card mb-4 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3 text-primary">Про веб-ресурс</h5>
+                            <p class="text-muted mb-2"><strong>AI News Portal</strong> — це сучасний інформаційний майданчик, присвячений найголовнішим подіям у сфері високих технологій, штучного інтелекту та інженерії.</p>
+                            <p class="text-muted mb-2">Наш сайт пропонує динамічну стрічку новин, зручну систему фільтрації публікацій за категоріями та інтерактивну галерею тематичних медіаматеріалів.</p>
+                            <p class="text-muted small mb-0">Проєкт розроблено в рамках розрахунково-графічної роботи (РГР) з метою демонстрації навичок адаптивної верстки, роботи з динамічними даними (JSON/JS) та створення зручного користувацького інтерфейсу (UI/UX).</p>
+                        </div>
+                    </div>
+
+                    <div class="card sidebar-card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3 text-primary">Популярні рубрики</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="news.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                    Генеративний ШІ <span class="badge bg-primary rounded-pill">8</span>
+                                </a>
+                                <a href="news.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                    Робототехніка <span class="badge bg-primary rounded-pill">8</span>
+                                </a>
+                                <a href="news.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                    Інші сфери технологій <span class="badge bg-primary rounded-pill">9</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="newsModalLabel">Назва новини</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-img" src="" alt="" class="img-fluid rounded mb-3 w-100" style="max-height: 400px; object-fit: cover;">
+                    <div id="modal-text" class="fs-5 lh-base"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-1">© 2026 Інформаційний портал «Новини штучного інтелекту».</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

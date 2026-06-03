@@ -1,0 +1,52 @@
+/* Загальні стилі сайту */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+/* Градієнтний логотип в шапці */
+.text-gradient {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* НАДІЙНИЙ ТЕМНИЙ БАННЕР (ГРАДІЄНТ ЗАМІСТЬ КАРТИНКИ) */
+.hero-section {
+    /* Сучасний глибокий хай-тек градієнт, який працює ЗАВЖДИ */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    padding: 100px 0; /* Комфортні відступи */
+    position: relative;
+    border-bottom: 3px solid #0d6efd; /* Стильна синя лінія знизу баннера */
+}
+
+/* Заголовок секції новин */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #0d6efd;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* Фіксований сайдбар при прокрутці */
+.sticky-sidebar {
+    position: sticky;
+    top: 90px;
+}
+
+/* Стилізація карток */
+.sidebar-card, .news-card {
+    border-radius: 12px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
